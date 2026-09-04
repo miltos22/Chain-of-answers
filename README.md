@@ -24,12 +24,12 @@ It outputs the instinct, pauses to think and doubt itself internally, and then c
 ## Results
 Testing was targeted on a lightly fine-tuned open local model (Qwen 3.6 35B Q4). 
 
-On a benchmark of 50 questions specifically designed to trick native LLM reasoning:
+On a benchmark of 50 questions specifically designed to trick native LLM reasoning (3 repeats):
 *   **Base model (Standard CoT):** 33%
 *   **Chain of Answers tuned model (no other changes applied):** 76%
 *   **Chain of Answers tuned model (modification of thinking template to fit chain of answers better):** 96%
 
-The architecture reliably caught co-location premise traps (e.g., realizing you don't drive a TV to a shop if the wall it needs to go on is already at your house), broke decoy frames, and hard-stopped impossible math questions (e.g., a train arriving before it departs).
+The architecture reliably caught co-location premise traps, (like the classic carwash test. base model 1/3, both chain of answer answers 3/3) broke decoy frames, and hard-stopped impossible math questions (e.g., a train arriving before it departs).
 
 ## Caveat: Code Generation
 In testing, actual code execution/accuracy was slightly worse using this architecture, though the feature planning, design thought, and originality were significantly better. The drop in code execution is because the fine-tuning of the model at this stage of research is not focused on code. This is a limitation of the current weights, not a limitation of the template.
