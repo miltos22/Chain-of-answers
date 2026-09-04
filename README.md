@@ -5,7 +5,7 @@ This repository outlines the Chain of Answers (CoA) reasoning architecture. It w
 
 
 ## The Problem: CoT as a Bulldozer
-The core issue with standard Chain of Thought (CoT) is that it acts like a bulldozer. If a prompt smuggles in a false premise or a logic trap, standard CoT locks onto it. The model predicts the next logical token based on the flawed setup and struggles to break its own frame once it starts generating. It rationalizes the false premise instead of rejecting it.
+The core issue with standard Chain of Thought (CoT) is that it acts like a bulldozer. If a prompt smuggles in a false premise or a logic trap, standard CoT locks onto it. The model predicts the next logical token based on the flawed setup and struggles to break its own frame once it starts generating. It rationalizes the false premise instead of rejecting it, under scopes complex tasks, and fails to reach conclusions on debated subjects even if they have scientifically optimal answers
 
 ## The Architecture
 Chain of Answers fixes this by restructuring generation into a single-turn, self-correcting loop. The basics of the architecture rely on separating internal mechanics from external outputs:
