@@ -4,8 +4,8 @@ A new LLM thinking architecture that can increase thinking quality and massively
 This repository outlines the Chain of Answers (CoA) reasoning architecture. It was discovered during my (miltos22) development of Project synaPsi (https://github.com/miltos22/SynaPsi) and appears to constitute a breakthrough in how large language models handle systemic reasoning and logic traps.
 
 
-## The Problem: CoT as a Bulldozer
-The core issue with standard Chain of Thought (CoT) is that it acts like a bulldozer. If a prompt smuggles in a false premise or a logic trap, standard CoT locks onto it. The model predicts the next logical token based on the flawed setup and struggles to break its own frame once it starts generating. It rationalizes the false premise instead of rejecting it, under scopes complex tasks, and fails to reach conclusions on debated subjects even if they have scientifically optimal answers
+## The Problem: CoT Is a Bulldozer
+The core issue with standard Chain of Thought (CoT) is that it acts like a bulldozer. If a prompt smuggles in a false premise or a logic trap, standard CoT locks onto it. The model predicts the next logical token based on the flawed setup and struggles to break its own frame once it starts generating. It rationalizes the false premise instead of rejecting it, under scopes complex tasks, and fails to reach conclusions on debated subjects even if they have scientifically optimal answers. Furthermore CoT can only ever be trained to a local maximum for each models active parameters, and this approach creates a new local maximum that's often higher
 
 ## The Architecture
 Chain of Answers fixes this by restructuring generation into a single-turn, self-correcting loop. The basics of the architecture rely on separating internal mechanics from external outputs:
