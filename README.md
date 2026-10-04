@@ -1,3 +1,5 @@
+Note: I am intentionally withholding exact information but this involved several real post training runs and extensive optimization while fully avoiding benchmark contamination. I am willing to disclose to appropriate parties.
+
 # Chain-of-answers proof of concept
 A new LLM thinking architecture that can increase thinking quality and massively increase responsiveness in voice modes
 
@@ -33,3 +35,5 @@ The architecture reliably caught co-location premise traps, (like the classic ca
 
 ## Caveat: Code Generation
 In testing, actual code execution/accuracy was slightly worse using this architecture, though the feature planning, design thought, and originality were significantly better. The drop in code execution is because the fine-tuning of the model at this stage of research is not focused on code. This is a limitation of the current weights, not a limitation of the template.
+
+Note: I am intentionally withholding exact information but this involved real post training runs and extensive optimization. I am willing to disclose to appropriate paries.
